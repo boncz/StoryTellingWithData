@@ -1,6 +1,6 @@
 # What Makes A Good Plot? 
 
-The best plots tell a story and need no other context with them to illustrate a point. They should be quickly digestible and insights gained quickly and easily. They should also have a clear audience in mind for the plot. Just like a story, book, or article. They vary in complexity based on the audience and tell a story or relay relevant information. For example Cat In The Hat probably isn't a great book for a PHD student. This doesn't make it  good book its just not its intended audience. 
+The best plots tell a story and need no other context with them to illustrate a point. They should be quickly digestible and insights gained quickly and easily. They should also have a clear audience in mind for the plot. Just like a story, book, or article. They vary in complexity based on the audience and tell a story or relay relevant information. For example Cat In The Hat probably isn't a great book for a PHD student. This doesn't make it not a good book its just not its intended audience. 
 
 Generally good plots have the following: 
 - A clear audience 
