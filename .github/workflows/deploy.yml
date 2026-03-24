@@ -16,6 +16,11 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    # --- THESE ARE THE NEW LINES ---
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # -------------------------------
     runs-on: ubuntu-latest
     
     defaults:
@@ -31,7 +36,6 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # Updated with './' to ensure it finds the file in the subfolder
           cache-dependency-path: './website/package-lock.json'
 
       - name: Install dependencies
@@ -46,7 +50,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # We use the absolute path from the repo root to avoid confusion
           path: 'website/dist'
 
       - name: Deploy to GitHub Pages
