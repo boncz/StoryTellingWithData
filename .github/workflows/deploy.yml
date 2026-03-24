@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # This tells GitHub to run all commands inside the 'website' folder
+    
     defaults:
       run:
         working-directory: website
@@ -31,8 +31,8 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # This tells the cache to look for package-lock.json inside 'website'
-          cache-dependency-path: website/package-lock.json
+          # Updated with './' to ensure it finds the file in the subfolder
+          cache-dependency-path: './website/package-lock.json'
 
       - name: Install dependencies
         run: npm install
@@ -46,8 +46,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Point this to the build folder inside the 'website' directory
-          path: './website/dist'
+          # We use the absolute path from the repo root to avoid confusion
+          path: 'website/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
